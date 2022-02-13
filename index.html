@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Random Quiz: Koee</title>
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> --> 
+     <!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script> -->
+     <link rel="shortcut icon" type="image" href="logo.png">
+     <link rel="stylesheet" href="style.css">
+     <!-- <link rel="stylesheet" href="bubblestyle.css"> -->
+     <style>
+
+     </style>
+</head>
+<body onload="showQuestion()">
+     
+
+     <!-- <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+     </div> -->
+
+     <div class="start">
+          <button class="quizstart">let's start quiz</button>
+          <button class="theme" style="background-color: transparent;" 
+          onclick="myFunction()"><i class="fas fa-moon"></i></button>
+     </div>
+     
+     <div class="info_box">
+          <div class="info-title">information about this quiz</div>
+          <div class="info-list">
+              <div class="info">1. You will have only <span>30 seconds</span> per each question.</div>
+              <div class="info">2. Once you select your answer, it can't be undone.</div>
+              <div class="info">3. You can't select any option once time goes off.</div>
+              <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+              <div class="info">5. You'll get points on the basis of your correct answers.</div>
+          </div>
+          <div class="buttons">
+              <button class="quit">Exit</button>
+              <button class="restart">Continue</button>
+          </div>
+     </div>
+
+     <div class="quiz_box">
+          <header>
+              <div class="title">Random Quiz Application</div>
+              <div class="timer">
+                  <div class="timeleft">Time Left</div>
+                  <div class="timersec">30</div>
+              </div>
+          </header>
+          <section>
+              <div class="question" style="text-transform: none;">
+               <!-- "What is your name?" -->
+                  <!-- JavaScript Question -->
+              </div>
+              <div class="option_list" id="option_container1">
+                
+              </div>
+              <div class="option_list" id="option_container2"></div>
+              <div class="option_list" id="option_container3"></div>
+              <div class="option_list" id="option_container4"></div>
+              <div class="option_list" id="option_container5"></div>
+               
+          </section>
+ 
+          <footer>
+              <div class="total_ques">
+                  <!-- JavaScript Total Questions -->
+              </div>
+              <div class="buttons">
+                    <button class="next" onclick="next()">Next</button>
+              </div>
+          </footer>
+     </div>
+
+     <div class="result_box" id="result">
+          <div class="icon">
+               <i class="fas fa-crown"></i>
+          </div>
+          <div class="complete_text">You've completed the Quiz!</div>
+          <div class="score_text">
+              <!-- JavaScript scores -->
+          </div>
+          <div class="buttons">
+              <button class="replay">Replay</button>
+              <button class="quit" onclick="quit()">Quit</button>
+          </div>
+     </div>  
+
+     <div class="footer" style="text-transform: none;">&copy; Copyright by <span> thet su su kyaw & si thu bo sann </span></div>
+      <script src="question.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
