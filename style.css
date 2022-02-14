@@ -304,15 +304,49 @@ body{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid var(--main-color);
     transition: all 0.3s ease;
 }
+
+.tools_box{
+    text-align: center;
+    margin-top: 1rem;
+}
+.tools_box .tools_btns button{
+     font-size: 20px;
+     font-weight: 500;
+     color: var(--main-color);
+     margin: 1rem;
+     padding: 12px 30px;
+     outline: none;
+     border: none;
+     border-radius: 5px;
+     background: #fff;
+     cursor: pointer;
+     height: 50px;
+     align-items: center;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tools_box .tools_btns button:hover{
+    text-decoration: underline;
+}
+.dark-theme .tools_box .tools_btns button{
+    border: 2px solid var(--main-color);
+    box-shadow: 0 4px 8px 0 rgba(238, 238, 238, 0.2), 
+                    0 6px 20px 0 rgba(250, 250, 250, 0.19);
+}
+.dark-theme .start,.info_box,.quiz_box,.result_box{
+    box-shadow: 0 4px 8px 0 rgba(238, 238, 238, 0.2), 
+                    0 6px 20px 0 rgba(250, 250, 250, 0.19);
+}
+
 
 .footer{
     text-align: center;
     font-size: 1.5rem;
     color: black;
-    margin-top: 35rem;
+    margin-top: 32rem;
 }
 .dark-theme .footer{
     color: rgb(6, 229, 245);

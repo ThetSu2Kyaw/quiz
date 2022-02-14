@@ -27,29 +27,29 @@ const quiz = [
 ];
 
 // Quiz Question
-var allQuestion = [];
-var allOption = [];
-var quiz_length = quiz.length;
-var option_length = 0;
-var current_question = [];
-var quiz_question = document.querySelector(".question");
-var question_length = quiz_length;
-var random = 0;
-var num = 0;
-var score = 0;
-var right = 0;
-var percentage = 0.0;
+let allQuestion = [];
+let allOption = [];
+let quiz_length = quiz.length;
+let option_length = 0;
+let current_question = [];
+let quiz_question = document.querySelector(".question");
+let question_length = quiz_length;
+let random = 0;
+let num = 0;
+let score = 0;
+let right = 0;
+let percentage = 0.0;
 
 function showQuestion(){
-    for(var i = 0; i < quiz_length; i++){
+    for(let i = 0; i < quiz_length; i++){
         allQuestion.push(quiz[i]);
     }
     
-    var random = Math.floor(Math.random()*question_length);
+    let random = Math.floor(Math.random()*question_length);
     setQuestion(random);
 
 }
-var time_left = 30;
+let time_left = 30;
 
 function show_sec(){
     if(time_left > 0){
@@ -68,7 +68,7 @@ function show_timer(){
 function setQuestion(index){
 	if(num == quiz_length){
 		time_left = 0;
-		for(var i = 0; i < quiz_length; i++){
+		for(let i = 0; i < quiz_length; i++){
         	allQuestion.push(quiz[i]);
     	}
     	num = 0;
@@ -77,18 +77,19 @@ function setQuestion(index){
 		document.querySelector(".start").style.display = "none";
 		document.querySelector("#result").style.display = "block";
 		totalScore();
+		
 	}
 	current_question = allQuestion[random];
 	quiz_question.innerHTML = `${allQuestion[random].q}`;
 	option_length = current_question.options.length;
 	
-	for(var i = 0; i < option_length; i++){
-		var box = document.querySelector(`#option_container${num+1}`);
-		for(var k = 0; k < quiz_length; k ++){
+	for(let i = 0; i < option_length; i++){
+		let box = document.querySelector(`#option_container${num+1}`);
+		for(let k = 0; k < quiz_length; k ++){
 			document.querySelector(`#option_container${k+1}`).style.display = "none";
 		}
 		box.style.display = "block";
-		var options = document.createElement("div");
+		let options = document.createElement("div");
 		options.innerHTML = current_question.options[i];
 		options.id = i;
 		options.classList.add("options");
